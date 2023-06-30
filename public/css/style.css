@@ -1,0 +1,31 @@
+*{
+    font-family: 'Electrolize', sans-serif;
+}
+
+.card{
+    min-height: 50vh;
+    cursor: pointer;
+    box-shadow: 5px 7px 5px;
+    transition: 0.5s;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 0px;
+    scale: 1.1  ;
+}
+
+.container-header{
+    background: linear-gradient(rgba(172, 150, 102, 0.749), rgba(193, 186, 163, 0.589)), url(/img/aereo.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    animation-name: movement;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+   
+}
+
+@keyframes movement {
+    0%{background-position: right;}
+    100%{background-position: left;}
+}
