@@ -16,6 +16,7 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class, "cardWelcome"])->name("welcome");
 Route::get('/descrizioneviaggio/{idTour}', [PublicController::class, "tourDescription"])->name("tourDescription");
+Route::get('/hotelpartner/{alloggio}', [PublicController::class, "pagehotel"])->name("hotel"); 
 
 Route::get('/chisiamo', [PublicController::class, "cardFounders"])->name("chisiamo");
 

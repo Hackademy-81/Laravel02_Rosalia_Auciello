@@ -30,11 +30,13 @@ class PublicController extends Controller
 
     ]; 
 
+    public $hotels=["Hotel Sole", "Luxury Hotel", "Hotel Luna", "Hotel Le Dune"]; 
+
 
 
     function cardWelcome() {
       
-        return view('welcome', ["viaggi"=>$this->tours]);
+        return view('welcome', ["viaggi"=>$this->tours], ["partners"=>$this->hotels]);
     }
 
     function tourDescription($idTour){
@@ -44,6 +46,10 @@ class PublicController extends Controller
             }
         }
       
+    }
+
+    function pageHotel($alloggio){
+        return view("hotelpartner", ["dettagliohotel"=>$alloggio]); 
     }
 
     function cardFounders() {

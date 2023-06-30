@@ -66,6 +66,22 @@
             </div>
         </div>
     </main>
+
+
+    <section class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center display-2">I nostri Hotel Partner</h2>
+        </div>
+        @foreach ($partners as $partner)
+        <div class="col-12">
+          <ul>
+            <a href="{{route('hotel', ["alloggio"=>$partner])}}"><li>{{$partner}}</li></a>
+          </ul>
+        </div>            
+        @endforeach
+      </div>
+    </section>
       
 
       
